@@ -1,9 +1,16 @@
+import coreConceptImage from "./assets/react-core-concepts.png"
+
+const titles = ["Fundamentals", "Crucial", "Core"];
+
+function getRandomInt(){
+  return Math.floor(Math.random() * titles.length);
+}
 
 export function Header({title, text}){
   return (
     <header>
-        <img src="src/assets/react-core-concepts.png" alt="Stylized atom" />
-        <h1>{title}</h1>
+        <img src={coreConceptImage} alt="Stylized atom" />
+        <h1>{title} {titles[getRandomInt()]}</h1>
         <p>
           {text}
         </p>
@@ -15,7 +22,7 @@ function App() {
   return (
     <div>
       <Header
-      title="React Essentials"
+      title="React"
       text="going to build!"
       />
       <main>
