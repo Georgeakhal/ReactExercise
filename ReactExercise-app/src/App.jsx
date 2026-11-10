@@ -1,5 +1,6 @@
 import coreConceptImage from "./assets/react-core-concepts.png"
 import Header from "./components/Header"
+import TabButton from "./components/TabButton"
 
 const titles = ["Fundamentals", "Crucial", "Core"];
 
@@ -8,7 +9,7 @@ function getRandomInt(){
 }
 
 
-export function CoreConcepts(){
+export function CoreConcepts({title, description, image}){
   return (
     <li>
       <img />
@@ -27,6 +28,16 @@ function App() {
       text="going to build!"
       image={coreConceptImage}
       />
+
+      <section id="examples">
+          <h2>Examples</h2>
+          <menu>
+            <TabButton />
+            <TabButton />
+            <TabButton />
+            <TabButton />
+          </menu>
+      </section>
       
       <main>
         <h2>Time to get started!</h2>
